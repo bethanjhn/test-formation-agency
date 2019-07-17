@@ -16,22 +16,33 @@ name = root.cssselect('title')
 # print the title
 for companyname in name:
     print companyname.text
+    
 
-# Find a second thing
-index = root.cssselect('dt')
+# Getting the descriptive list    
+list = root.cssselect('dl')
+ 
+    
+ for companylist in list:
+    print companylist.text
+    record = { "companylist" : companylist.text } # column name and value
+    scraperwiki.sqlite.save(["companylist"], record) # save the records one by one
 
-for companyindex in index:
-#     print companyindex.text
-    record = { "companyindex" : companyindex.text } # column name and value
-    scraperwiki.sqlite.save(["companyindex"], record) # save the records one by one
 
-# Find a third thing
-address = root.cssselect('dd')
+# # Find a second thing
+# index = root.cssselect('dt')
 
-for companyinfo in address:
-#     print companyinfo.text
-    record = { "companyinfo" : companyinfo.text } # column name and value
-    scraperwiki.sqlite.save(["companyinfo"], record) # save the records one by one
+# for companyindex in index:
+# #     print companyindex.text
+#     record = { "companyindex" : companyindex.text } # column name and value
+#     scraperwiki.sqlite.save(["companyindex"], record) # save the records one by one
+
+# # Find a third thing
+# address = root.cssselect('dd')
+
+# for companyinfo in address:
+# #     print companyinfo.text
+#     record = { "companyinfo" : companyinfo.text } # column name and value
+#     scraperwiki.sqlite.save(["companyinfo"], record) # save the records one by one
     
 
 
