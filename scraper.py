@@ -22,7 +22,7 @@ for companyname in name:
 list = root.cssselect('dl')
  
     
- for companylist in list:
+for companylist in list:
     print companylist.text
     record = { "companylist" : companylist.text } # column name and value
     scraperwiki.sqlite.save(["companylist"], record) # save the records one by one
