@@ -21,7 +21,7 @@ for companyname in name:
 address = root.cssselect('dd')[0]
 
 for companyaddress in address:
-    print companyaddress.text
+    print companyaddress[0].text
 
 
 # # # Write out to the sqlite database using scraperwiki library
