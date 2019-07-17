@@ -18,7 +18,7 @@ for companyname in name:
     print companyname.text
 
 # Find a second thing
-address = root.cssselect('dd')
+address = root.cssselect('dd.text-data')
 
 for companyaddress in address:
     print companyaddress.text
