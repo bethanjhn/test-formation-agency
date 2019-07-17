@@ -12,10 +12,9 @@ root = lxml.html.fromstring(html)
 name = root.cssselect("title[data-id='company_profile']")
 
 for conmpany_profile in name
-print lxml.html.tostring(company_profile)
-print compnay_profile.text
+    print lxml.html.tostring(company_profile)
+    print company_profile.text
 
-print name
 #
 # # # Write out to the sqlite database using scraperwiki library
 # scraperwiki.sqlite.save(unique_keys=['name'], data={"name": "susan", "occupation": "software developer"})
