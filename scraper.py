@@ -28,8 +28,10 @@ for companyindex in index:
 # Find a third thing
 address = root.cssselect('dd')
 
-for companyaddress in address:
-    print companyaddress.text
+for companyinfo in address:
+#     print companyinfo.text
+    record = { "companyinfo" : companyinfo.text } # column name and value
+    scraperwiki.sqlite.save(["companyinfo"], record) # save the records one by one
     
 
 
