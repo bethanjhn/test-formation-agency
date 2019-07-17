@@ -18,31 +18,30 @@ for companyname in name:
     print companyname.text
     
 
-# Getting the descriptive list    
-list = root.cssselect('dl')
- 
-    
-for companylist in list:
-    print companylist.text
-    record = { "companylist" : companylist.text } # column name and value
-    scraperwiki.sqlite.save(["companylist"], record) # save the records one by one
+######## Trying to get the descriptive list - just gave us three columns    
+# list = root.cssselect('dl')
+
+# for companylist in list:
+#     print companylist.text
+#     record = { "companylist" : companylist.text } # column name and value
+#     scraperwiki.sqlite.save(["companylist"], record) # save the records one by one
 
 
-# # Find a second thing
-# index = root.cssselect('dt')
+####### Find a second thing
+index = root.cssselect('dt')
 
-# for companyindex in index:
-# #     print companyindex.text
-#     record = { "companyindex" : companyindex.text } # column name and value
-#     scraperwiki.sqlite.save(["companyindex"], record) # save the records one by one
+for companyindex in index:
+#     print companyindex.text
+    record = { "companyindex" : companyindex.text } # column name and value
+    scraperwiki.sqlite.save(["companyindex"], record) # save the records one by one
 
-# # Find a third thing
-# address = root.cssselect('dd')
+###### Find a third thing
+address = root.cssselect('dd')
 
-# for companyinfo in address:
-# #     print companyinfo.text
-#     record = { "companyinfo" : companyinfo.text } # column name and value
-#     scraperwiki.sqlite.save(["companyinfo"], record) # save the records one by one
+for companyinfo in address:
+#     print companyinfo.text
+    record = { "companyinfo" : companyinfo.text } # column name and value
+    scraperwiki.sqlite.save(["companyinfo"], record) # save the records one by one
     
 
 
