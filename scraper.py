@@ -12,7 +12,7 @@ root = lxml.html.fromstring(html)
 name = root.cssselect('title')
 
 for company in name:
-    print title.text
+    print company.text
 
 #
 # # # Write out to the sqlite database using scraperwiki library
