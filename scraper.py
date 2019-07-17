@@ -22,12 +22,17 @@ index = root.cssselect('dt')
 
 for companyindex in index:
     print companyindex.text
+    
+record = { "companyindex" : companyindex.text } # column name and value
+scraperwiki.sqlite.save(["dt"], record) # save the records one by one
 
 # Find a third thing
 address = root.cssselect('dd')
 
 for companyaddress in address:
     print companyaddress.text
+    
+
 
 
 # # # Write out to the sqlite database using scraperwiki library
