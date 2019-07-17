@@ -11,7 +11,7 @@ html = scraperwiki.scrape("https://beta.companieshouse.gov.uk/company/04503188")
 root = lxml.html.fromstring(html)
 name = root.cssselect('title')
 
-for title in name:
+for company in name:
     print title.text
 
 #
