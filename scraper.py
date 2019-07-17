@@ -18,6 +18,12 @@ for companyname in name:
     print companyname.text
 
 # Find a second thing
+index = root.cssselect('dt')
+
+for companyindex in index:
+    print companyindex.text
+
+# Find a third thing
 address = root.cssselect('dd')
 
 for companyaddress in address:
