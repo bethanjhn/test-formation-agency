@@ -24,7 +24,7 @@ for companyindex in index:
     print companyindex.text
     
 record = { "companyindex" : companyindex.text } # column name and value
-scraperwiki.sqlite.save(["dt"], record) # save the records one by one
+scraperwiki.sqlite.save(["companyindex"], record) # save the records one by one
 
 # Find a third thing
 address = root.cssselect('dd')
