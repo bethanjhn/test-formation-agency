@@ -9,10 +9,10 @@ html = scraperwiki.scrape("https://beta.companieshouse.gov.uk/company/04503188")
 #
 # # Find something on the page using css selectors
 root = lxml.html.fromstring(html)
-name = root.cssselect("title[data-id='company_profile']")
+name = root.cssselect("title.data-id")
 
-for conmpany_profile in name
-    print lxml.html.tostring(company_profile)
+for company in name
+    print lxml.html.tostring(company)
     print company_profile.text
 
 #
